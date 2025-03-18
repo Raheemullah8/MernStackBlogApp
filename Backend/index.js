@@ -6,16 +6,16 @@ connectDb();
 import AuthRoute from './routes/Auth.Route.js';
 
 const app = express();  
-const PORT = process.env.PORT||5000;  
+const PORT = process.env.PORT || 5000;  // This will now read from your .env file  
 
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {     
     res.send("hello"); 
 });
-app.use("/user",AuthRoute);
+app.use("/user", AuthRoute);
 
 app.listen(PORT, () => {     
     console.log(`Server is running on http://localhost:${PORT}`);    
