@@ -29,7 +29,7 @@ const GetPost = async (req, res) => {
 
   } catch (error) {
     console.log(error.message);
-    res.status(501).json({ err: true, msg: "internal server error" })
+    res.status(500).json({ err: true, msg: "internal server error" })
   }
 }
 
