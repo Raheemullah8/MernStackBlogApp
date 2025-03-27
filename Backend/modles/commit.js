@@ -11,11 +11,11 @@ const commitSchema = new mongoose.Schema({
         ref:"user",
         required:true
     },
-    comment:{
+    comments:{
         type:String,
         required:true
     }
 });
-const commit = mongoose.model("commit",commitSchema);
+const CommitModel = mongoose.model("commit",commitSchema);
 
-export default commit;
+export default CommitModel;

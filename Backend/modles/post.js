@@ -9,7 +9,11 @@ const post= new mongoose.Schema({
     },
     thumbnail:{
         type: String,
-    }
+    },
+    comments:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"commit"
+    }]
 },{timestamps:true})
 const postSchema = mongoose.model("post",post);
 export default postSchema;

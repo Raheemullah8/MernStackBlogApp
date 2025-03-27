@@ -1,7 +1,8 @@
 import express from "express"
-import { commits } from "../controllers/Commit.js";
+import { comments } from "../controllers/Commit.js";
+import { isLogin } from "../middleware/isAdmin.js";
 const router = express.Router();
 
-router.get("/",commits)
+router.post("/addcommit",isLogin,comments)
 
 export default router;
