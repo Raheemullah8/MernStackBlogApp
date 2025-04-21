@@ -48,7 +48,7 @@ function RecentPost() {
               <div className='blog-content'>
                 <h5 className='blog-title'>{post.title}</h5>
                 <p className='blog-description'>{post.desc}</p>
-                <button className='read-btn' onClick={handleEvents}>Read Article</button>
+                <button className='read-btn' onClick={handleEvents}>Read-Article </button>
               </div>
             </div>
           </div>

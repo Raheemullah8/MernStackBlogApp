@@ -7,7 +7,7 @@ import Profile from "./Pages/Profile"
 import UserLayout from "./Layouts/UserLayout"
 
 import AdminLayout from "./Layouts/AdminLayout"
-import Dashbord from "./Pages/Admin/Dashobrd"
+import Dashboard from "./Pages/Admin/Dashboard"
 import User from "./Pages/Admin/Users"
 import AllPost from "./Pages/Admin/AllPost"
 import AddPost from "./Pages/Admin/Addpost"
@@ -28,10 +28,10 @@ function App() {
         <Route path="post/:id" element={<Posts/>} />
         </Route>
 
-        <Route path="/dashbord" element={<AdminLayout/>}>
-          <Route index element={<Dashbord/>}/>
+        <Route path="/dashboard" element={<AdminLayout/>}>
+          <Route index element={<Dashboard/>}/>
           <Route path="addpost" element={<AddPost/>}/>
-          <Route path="user" element={<User/>}/>
+          <Route path="allusers" element={<User/>}/>
           <Route path="allpost" element={<AllPost/>}/>
         </Route>
        

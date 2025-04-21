@@ -32,7 +32,7 @@ function Navbar() {
 
         <ul className="dropdown-menu dropdown-menu-end dropdown-menu-dark">
           <li>
-            <Link className="dropdown-item" to="/dashbord">Dashboard</Link>
+            <Link className="dropdown-item" to="/dashboard">Dashboard</Link>
           </li>
           <li>
             <Link className="dropdown-item" to="/profile/2222">Profile</Link>

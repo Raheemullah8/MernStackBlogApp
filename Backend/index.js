@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config();
 import cookieParser from 'cookie-parser';
+import cors from 'cors';
 import connectDb from './utils/db.js';
 import AuthRoute from './routes/Auth.Route.js';
 import PostRoute from './routes/Post.Route.js';
@@ -18,6 +19,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(cookieParser());
+app.use(cors({
+    origin: true,
+    credentials: true,
+}))
 
 app.get("/", (req, res) => {     
     res.send("hello"); 
