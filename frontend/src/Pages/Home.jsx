@@ -18,7 +18,7 @@ function RecentPost() {
   try {
     setLoading(true)
     const res = await get('/post/getpost');
-    console.log(res.data.getPost);
+ ;
     setPosts(res.data.getPost);
     setLoading(false)
   } catch (error) {
@@ -63,7 +63,7 @@ function RecentPost() {
             <div className="text-center text-white fs-bold">No posts available.</div>
           )}
           
-          {!loading && !error && posts.length > 0 && posts.map((post) => (
+          {!loading && !error && posts.length > 0 && posts.reverse().map((post) => (
             <div className="col-sm-12 col-md-6 col-lg-4 mb-4" key={post._id}>
               <div className="card h-100 shadow-lg border-0">
                 <img
@@ -75,7 +75,7 @@ function RecentPost() {
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">{post?.title}</h5>
                   <p className="card-text flex-grow-1">{post?.description}</p>
-                  <button className="btn btn-primary btn-sm mt-auto w-100" onClick={()=>{navgate('post/1')}}>Read Article</button>
+                  <button className="btn btn-primary btn-sm mt-auto w-100" onClick={()=>{navgate(`post/${post._id}`)}}>Read Article</button>
                 </div>
               </div>
             </div>
