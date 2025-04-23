@@ -17,7 +17,6 @@ function Post() {
       setLoading(true); // Loading start
       const res = await get(`/public/singlepost/${id}`); // API call
       setPost(res.data.post); // Jo post aayi usay state mein set karo
-      console.log(res.data.post); 
       setLoading(false); // Loading khatam
     } catch (error) {
       console.error(error.message); // Agar error aaye to console mein dikhao
